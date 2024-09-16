@@ -38,6 +38,7 @@ export default function Home() {
         </div>
 
         {/* Feedback Button */}
+        <Link href="/feedback" passHref></Link>
         <a
           className="rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full max-w-screen-sm"
           href="#feedback"
