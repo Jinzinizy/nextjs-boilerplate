@@ -16,8 +16,8 @@ export default function Home() {
 
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <p className="text-center text-white sm:text-left text-lg">
-          Welcome to my submission for the Digital Customer Success Manager role at Vercel <br/> 
-          Click on the buttons below to navigate through my answers to the questions<br/><br/><br/>
+          Welcome to my submission for the Digital Customer Success Manager role at Vercel, <br/> 
+          Click on the buttons below view my answers!<br/><br/>
           Looking forward to hearing feedback from you soon; thanks!
         </p>
       </main>
