@@ -18,7 +18,7 @@ export default function Home() {
        <p className="text-center text-white text-lg">
         Welcome to my submission for the Digital Customer Success Manager role at Vercel,<br/>
         Click on the buttons below to view my answers!<br /><br />
-        Looking forward to hearing feedback from you soon; thanks!
+        Looking forward to hearing feedback from you soon; thanks =]
       </p>
       </main>
 
