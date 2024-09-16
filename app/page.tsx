@@ -24,6 +24,13 @@ export default function Home() {
           Looking forward to hearing feedback from you soon; thanks =]
         </p>
       </main>
+      
     </div>
+
+<RootLayout>
+{/* Other content */}
+<Footer />
+</RootLayout>
+
   );
 }
