@@ -21,27 +21,6 @@ export default function Home() {
         Looking forward to hearing feedback from you soon; thanks =]
       </p>
       </main>
-
-      <footer className="row-start-3 flex flex-col items-center gap-4 w-full">
-        <div className="flex gap-4 flex-wrap items-center justify-center">
-          {Array.from({ length: 8 }, (_, i) => (
-            <a
-              key={i}
-              className="rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-              href={`#question${i + 1}`}
-            >
-              Question {i + 1}
-            </a>
-          ))}
-
-        </div>
-        <a
-          className="rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full max-w-screen-sm"
-          href="#feedback"
-        >
-          Feedback
-        </a>
-      </footer>
     </div>
   );
 }
