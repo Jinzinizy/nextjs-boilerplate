@@ -45,14 +45,14 @@ export default function RootLayout({
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
-          <footer className="flex flex-col items-center gap-2 w-full">
-            <div className="flex gap-1 justify-center w-full">
+          <footer className="flex flex-col items-center w-full">
+            <div className="flex gap-2 justify-between w-2/3">
               {/* Buttons for Questions 1-8 */}
               {Array.from({ length: 8 }, (_, i) => (
                 <Link 
                   href={`/questions/${i + 1}`} 
                   key={i} 
-                  className="rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-2 sm:px-3"
+                  className="flex-1 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-2"
                 >
                   Q{i + 1}
                 </Link>
@@ -62,7 +62,7 @@ export default function RootLayout({
             {/* Feedback Button that spans across the width */}
             <Link 
               href="/feedback"
-              className="mt-2 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-4 w-full max-w-xs"
+              className="mt-2 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-4 w-2/3"
             >
               Feedback
             </Link>
