@@ -35,18 +35,15 @@ export default function RootLayout({
             Home
           </Link>
         </header>
-        
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-gray-900 text-white-[family-name:var(--font-geist-sans)]">
-      <div className="absolute top-8 right-8">
-        <Image
-          className="invert"  
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-      </div>
+
+        {/* Main layout using flex and setting height to exactly fit the screen */}
+        <div className="flex flex-col justify-center items-center h-screen p-2">
+          
+          {/* Main content */}
+          <main className="flex flex-col items-center justify-center mb-4">
+            {children}
+          </main>
+
           {/* Footer with Questions and Feedback buttons */}
           <footer className="flex flex-col items-center w-full">
             <div className="flex gap-2 justify-between w-2/3">
