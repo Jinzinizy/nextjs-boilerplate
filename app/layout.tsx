@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description: "Digital CSM take-home assignment submission for - Mujin Zhang",
 };
 
+// Reusable button class for consistent styling
+const buttonClass = "flex-1 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-2";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}>
+        
         {/* Logo at the top-right corner */}
         <header className="absolute top-4 right-4">
           <Image
@@ -42,14 +46,14 @@ export default function RootLayout({
           />
         </header>
 
-        {/* Home Button styled like the other buttons (Top Left) */}
+        {/* Home Button with the same style as other buttons */}
         <header className="absolute top-4 left-4">
-          <Link href="/" className="flex-1 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-2">
+          <Link href="/" className={buttonClass}>
             Home
           </Link>
         </header>
 
-        {/* Main layout using flex and setting height to exactly fit the screen */}
+        {/* Main layout */}
         <div className="flex flex-col justify-center items-center h-screen p-2">
           
           {/* Main content */}
@@ -58,24 +62,24 @@ export default function RootLayout({
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
-          <footer className="absolute bottom-1/3 flex flex-col items-center w-2/3">
+          <footer className="absolute bottom-1/5 flex flex-col items-center w-2/3">
             <div className="flex gap-2 justify-between w-full">
-              {/* Buttons for Questions 1-8 */}
+              {/* Reuse buttonClass for each Question button */}
               {Array.from({ length: 8 }, (_, i) => (
                 <Link 
                   href={`/questions/${i + 1}`} 
                   key={i} 
-                  className="flex-1 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-2"
+                  className={buttonClass}
                 >
                   Q{i + 1}
                 </Link>
               ))}
             </div>
 
-            {/* Feedback Button that spans across the width */}
+            {/* Feedback Button */}
             <Link 
               href="/feedback"
-              className="mt-2 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-4 w-full"
+              className={`${buttonClass} mt-2 w-full`}
             >
               Feedback
             </Link>
