@@ -42,9 +42,9 @@ export default function RootLayout({
           />
         </header>
 
-        {/* Home Button (Top Left) */}
+        {/* Home Button styled like the other buttons (Top Left) */}
         <header className="absolute top-4 left-4">
-          <Link href="/" className="text-lg text-white hover:underline">
+          <Link href="/" className="flex-1 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-2">
             Home
           </Link>
         </header>
@@ -58,7 +58,7 @@ export default function RootLayout({
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
-          <footer className="absolute bottom-1/6 flex flex-col items-center w-2/3">
+          <footer className="absolute bottom-1/3 flex flex-col items-center w-2/3">
             <div className="flex gap-2 justify-between w-full">
               {/* Buttons for Questions 1-8 */}
               {Array.from({ length: 8 }, (_, i) => (
