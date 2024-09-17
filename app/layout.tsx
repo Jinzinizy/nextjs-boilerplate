@@ -58,7 +58,7 @@ export default function RootLayout({
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
-          <footer className="absolute bottom-1/4 flex flex-col items-center w-2/3">
+          <footer className="absolute bottom-1/6 flex flex-col items-center w-2/3">
             <div className="flex gap-2 justify-between w-full">
               {/* Buttons for Questions 1-8 */}
               {Array.from({ length: 8 }, (_, i) => (
