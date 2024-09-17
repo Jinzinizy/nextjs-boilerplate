@@ -28,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}>
         {/* Home Button (Top Left) */}
         <header className="absolute top-4 left-4">
           <Link href="/" className="text-lg text-white hover:underline">
@@ -38,8 +36,8 @@ export default function RootLayout({
           </Link>
         </header>
 
-        {/* Main layout using flex and setting height to exactly fit screen */}
-        <div className="flex flex-col justify-between h-screen p-4">
+        {/* Main layout using flex and setting height to exactly fit the screen */}
+        <div className="flex flex-col justify-center items-center h-screen p-2">
           
           {/* Main content */}
           <main className="flex flex-col items-center justify-center flex-grow">
@@ -47,22 +45,24 @@ export default function RootLayout({
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
-          <footer className="grid grid-cols-8 gap-2 w-full">
-            {/* Buttons for Questions 1-8 */}
-            {Array.from({ length: 8 }, (_, i) => (
-              <Link 
-                href={`/questions/${i + 1}`} 
-                key={i} 
-                className="col-span-1 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-3 sm:px-4"
-              >
-                Question {i + 1}
-              </Link>
-            ))}
+          <footer className="flex flex-col items-center gap-2 w-full">
+            <div className="grid grid-cols-4 gap-1">
+              {/* Buttons for Questions 1-8 */}
+              {Array.from({ length: 8 }, (_, i) => (
+                <Link 
+                  href={`/questions/${i + 1}`} 
+                  key={i} 
+                  className="rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-2 sm:px-3"
+                >
+                  Question {i + 1}
+                </Link>
+              ))}
+            </div>
 
-            {/* Feedback Button that spans the entire width from Button 1 to Button 8 */}
+            {/* Feedback Button that spans across the width */}
             <Link 
               href="/feedback"
-              className="col-span-8 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-8 sm:h-10 px-4 sm:px-5 w-full"
+              className="mt-2 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-4 w-full max-w-xs"
             >
               Feedback
             </Link>
