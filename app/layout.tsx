@@ -40,13 +40,13 @@ export default function RootLayout({
         <div className="flex flex-col justify-center items-center h-screen p-2">
           
           {/* Main content */}
-          <main className="flex flex-col items-center justify-center flex-grow">
+          <main className="flex flex-col items-center justify-center mb-4">
             {children}
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
           <footer className="flex flex-col items-center gap-2 w-full">
-            <div className="grid grid-cols-4 gap-1">
+            <div className="flex gap-1 justify-center w-full">
               {/* Buttons for Questions 1-8 */}
               {Array.from({ length: 8 }, (_, i) => (
                 <Link 
@@ -54,7 +54,7 @@ export default function RootLayout({
                   key={i} 
                   className="rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-2 sm:px-3"
                 >
-                  Question {i + 1}
+                  Q{i + 1}
                 </Link>
               ))}
             </div>
