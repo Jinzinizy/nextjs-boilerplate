@@ -1,6 +1,7 @@
 import type { Metadata } from "next"; 
 import localFont from "next/font/local";
 import Link from "next/link";  // Import Link for navigation
+import Image from "next/image";  // Import Image for the logo
 import "./globals.css";
 
 // Load custom fonts
@@ -18,7 +19,7 @@ const geistMono = localFont({
 // Metadata for the page
 export const metadata: Metadata = {
   title: "Digital CSM - Mujin Zhang",
-  description: "Digital CSM take home assignment submission for - Mujin Zhang",
+  description: "Digital CSM take-home assignment submission for - Mujin Zhang",
 };
 
 export default function RootLayout({
@@ -29,6 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}>
+        {/* Logo at the top-right corner */}
+        <header className="absolute top-4 right-4">
+          <Image
+            className="invert"
+            src="https://nextjs.org/icons/next.svg"
+            alt="Next.js logo"
+            width={100}
+            height={24}
+            priority
+          />
+        </header>
+
         {/* Home Button (Top Left) */}
         <header className="absolute top-4 left-4">
           <Link href="/" className="text-lg text-white hover:underline">
@@ -45,8 +58,8 @@ export default function RootLayout({
           </main>
 
           {/* Footer with Questions and Feedback buttons */}
-          <footer className="flex flex-col items-center w-full">
-            <div className="flex gap-2 justify-between w-2/3">
+          <footer className="flex flex-col items-center w-2/3">
+            <div className="flex gap-2 justify-between w-full">
               {/* Buttons for Questions 1-8 */}
               {Array.from({ length: 8 }, (_, i) => (
                 <Link 
@@ -62,7 +75,7 @@ export default function RootLayout({
             {/* Feedback Button that spans across the width */}
             <Link 
               href="/feedback"
-              className="mt-2 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-4 w-2/3"
+              className="mt-2 rounded-full border border-solid border-gray-600 transition-colors flex items-center justify-center hover:bg-gray-800 text-white text-sm sm:text-base h-6 sm:h-8 px-4 w-full"
             >
               Feedback
             </Link>
