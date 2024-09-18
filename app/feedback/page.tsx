@@ -1,3 +1,5 @@
+import React from "react";
+
 // /app/feedback/page.tsx
 export default function FeedbackPage() {
   return (

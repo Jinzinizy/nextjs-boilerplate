@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Link from "next/link";  // Import Link for navigation
 import Image from "next/image";  // Import Image for the logo
 import "./globals.css";
+import React from "react";
 
 // Load custom fonts
 const geistSans = localFont({
@@ -32,8 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white h-screen flex flex-col`}>
-
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white min-h-screen flex flex-col`}>
+        
         {/* Logo at the top-right corner */}
         <header className="absolute top-4 right-4">
           <Image
@@ -53,13 +54,13 @@ export default function RootLayout({
           </Link>
         </header>
 
-        {/* Main content - adjust flex to fit within the viewport */}
-        <main className="flex-grow flex flex-col justify-center items-center p-4 max-h-[80vh] overflow-hidden">
+        {/* Main content - this grows to fill the available space */}
+        <main className="flex-grow flex flex-col justify-center items-center p-4">
           {children}
         </main>
 
         {/* Footer with Questions and Feedback buttons */}
-        <footer className="w-full bg-gray-900 p-4 flex-shrink-0">
+        <footer className="w-full bg-gray-900 p-4">
           <div className="flex justify-between w-full gap-2">
             {/* Reuse buttonClass for each Question button */}
             {Array.from({ length: 7 }, (_, i) => (
