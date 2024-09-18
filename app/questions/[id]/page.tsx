@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
-import localFont from 'next/font/local';
 
 
 // Helper function to get the question data
