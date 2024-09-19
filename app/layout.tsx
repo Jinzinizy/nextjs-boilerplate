@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import Link from "next/link";  // Import Link for navigation
 import Image from "next/image";  // Import Image for the logo
 import "./globals.css";
-import React from "react";
 
 // Load custom fonts
 const geistSans = localFont({
